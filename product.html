@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shop the AeroSound Max Wireless ANC Headphones. Premium active noise-canceling headphones with studio-quality audio, 45-hour battery life, and spatial sound.">
+    <title>AeroSound Max - Premium Wireless ANC Headphones | Aero Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                    <path
+                        d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+                <span>AERO</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">Shop</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="cart-icon-container">
+                    <button class="icon-btn" id="open-cart-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                        <span class="cart-badge" id="cart-badge-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Product Hero Section -->
+        <section class="product-hero-section">
+            <div class="container product-grid">
+
+                <!-- Gallery Column -->
+                <div class="gallery-column">
+                    <div class="thumbnail-list">
+                        <button class="thumbnail-item active" data-img="assets/headphone-black.png">
+                            <img src="assets/headphone-black.png" alt="Black thumbnail">
+                        </button>
+                        <button class="thumbnail-item" data-img="assets/headphone-silver.png">
+                            <img src="assets/headphone-silver.png" alt="Silver thumbnail">
+                        </button>
+                        <button class="thumbnail-item" data-img="assets/headphone-gold.png">
+                            <img src="assets/headphone-gold.png" alt="Gold thumbnail">
+                        </button>
+                    </div>
+
+                    <div class="main-image-container">
+                        <span class="tag-overlay">Save $50</span>
+                        <img id="main-product-image" src="assets/headphone-black.png" alt="AeroSound Max Headphone">
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="info-column">
+                    <span class="brand-name">AERO AUDIO | PREMIER SERIES</span>
+                    <h1 class="product-title">AeroSound Max Wireless</h1>
+
+                    <div class="price-row">
+                        <span class="current-price">$349.99</span>
+                        <span class="original-price">$399.99</span>
+                    </div>
+
+                    <!-- Color Swatches -->
+                    <div class="color-picker-container">
+                        <div class="section-label">Color: <span id="color-name">Midnight Black</span></div>
+                        <ul class="swatches-list">
+                            <li class="swatch-item active" data-color="Midnight Black"
+                                data-img="assets/headphone-black.png">
+                                <span class="swatch-color swatch-black"></span>
+                            </li>
+                            <li class="swatch-item" data-color="Arctic Silver" data-img="assets/headphone-silver.png">
+                                <span class="swatch-color swatch-silver"></span>
+                            </li>
+                            <li class="swatch-item" data-color="Champagne Gold" data-img="assets/headphone-gold.png">
+                                <span class="swatch-color swatch-gold"></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="quantity-actions-container">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qty-decrement">&minus;</button>
+                            <input type="text" class="qty-input" id="qty-number" value="1" readonly>
+                            <button class="qty-btn" id="qty-increment">&plus;</button>
+                        </div>
+                        <button class="btn btn-primary" id="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close-btn" id="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-drawer-body">
+            <div class="cart-items-list" id="cart-items-list"></div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-row total">
+                <span>Total</span>
+                <span id="cart-total-value">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
